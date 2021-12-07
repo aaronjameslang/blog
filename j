@@ -10,9 +10,9 @@ then
   exit 1
 fi
 
-if ! type bundle > /dev/null
+if ! type bundle > /dev/null || ! bundle -v | grep 2.2.33 > /dev/null
 then
-  gem install --user-install bundler
+  gem install --user-install bundler:2.2.33
 fi
 
 if type xcrun > /dev/null
