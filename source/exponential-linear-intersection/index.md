@@ -51,10 +51,8 @@ and when equated we can easily solve for \(x\)
 \[ nx = \ln { m \over n } \]
 \[ nx = \ln m - \ln n \]
 \[ x = { \ln m - \ln n \over n } \]
-</p>
-
-<p>
-So now we know that when \( x = { \ln m - \ln n \over n } \) the lines are parralell, and if the lines intersect at all \(z\) must be less than \(y\) at this point.
+</p><p>
+So now we know that when \( x = { \ln m - \ln n \over n } \) the lines are parallel, and if the lines intersect at all \(z\) must be less than \(y\) at this point.
 </p>
 
 Once we know there the lines intersect, we can resort to numerical methods to find the intersection itself, such as a binary search or the Newton-Raphson method.
