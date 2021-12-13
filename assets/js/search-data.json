@@ -29,30 +29,60 @@
     "url": "/blog/highcharts-demo/",
     "relUrl": "/highcharts-demo/"
   },"5": {
-    "doc": "UK House Prices",
-    "title": "UK House Prices",
-    "content": "If you’re looking to buy a house, you might be interested in what the housing market will look like in the future. By the time you’ve saved up your deposit, it may no longer be enough to afford the house you want! . Just by glancing at the graph above we can see that house prices go up over the long term, but predicting even a few years ahead is difficult. Trends plotted in 1990 or 2007 would not have been accurate a few years later. Many finance trends are exponential, so let’s look at the above data on a logarithmic scale. Now the same data paints a different picture, if fact in you squint hard enough you can almost see a linear trend. Smoother data is easier to predict, and the 2008 financial crash does look a lot less pronounced from this perspective, appearing to be merely a reversion to the “expected” price. However the 1990s slump is still there, and new irregularities have even appeared, such as the boom in the early 1970s. An easing of credit conditions by the Bank of England coupled with the go-for-growth strategy of the Conservative chancellor, Tony Barber, resulted in house-price inflation peaking at 36%. The average price of a home, which had risen from £2,000 to £5,000 between 1950 and 1970, doubled in the next three years. The boom ended when the Yom Kippur war and the Opec oil embargo ushered in the stagflation of the mid-1970s. L. Elliot, A brief history of British housing . In an effort to find more predictable data, let’s limit ourselves to the last 10 years. This is a somewhat abritrary time frame, but does exclude the 2008 crash and some of it’s aftershocks. Here we can see that between Oct 2011 and Sep 2021 house prices rose from 165kGBP to almost 260kGBP, that’s 57% over the decade or an APR of 4.65%. Data courtesy of HM Land Registry . ",
-    "url": "/blog/uk-house-prices/",
-    "relUrl": "/uk-house-prices/"
+    "doc": "Student Loan Calculator",
+    "title": "Student Loan Calculator",
+    "content": "Most graduates in the UK have a significant amount of student debt, but with low interest and means-based repayments taken directly from their pay cheques, few ever think about it. How soon will your loan be re-payed? Should you consider repaying your student loan early? Here we can answer those questions and more. This calculator assumes you’re on repayment plan 1. Figures are correct at time of writing. ",
+    "url": "/blog/student-loan-calculator/",
+    "relUrl": "/student-loan-calculator/"
   },"6": {
+    "doc": "Student Loan Calculator",
+    "title": "Repayments",
+    "content": "For plan 1 the threshold is £1,657 a month, above which you’ll pay 9% of your salary. What’s your current yearly income pre-tax? . Each month you currently repay ?. Your repayment will go up if your income increases. We’ll assume a 10% annual raise every year. ",
+    "url": "/blog/student-loan-calculator/#repayments",
+    "relUrl": "/student-loan-calculator/#repayments"
+  },"7": {
+    "doc": "Student Loan Calculator",
+    "title": "Interest Charges",
+    "content": "Your debt will accrue interest at 1.1% APR. What’s the value of your student loan today? . Each month your debt accrues interest of ?. ",
+    "url": "/blog/student-loan-calculator/#interest-charges",
+    "relUrl": "/student-loan-calculator/#interest-charges"
+  },"8": {
+    "doc": "Student Loan Calculator",
+    "title": "Write Off",
+    "content": "Your loan will be written of 25 years after you graduate. When did you graduate? . Based on your graduation date, your loan will be written off ?, ? . ",
+    "url": "/blog/student-loan-calculator/#write-off",
+    "relUrl": "/student-loan-calculator/#write-off"
+  },"9": {
+    "doc": "Student Loan Calculator",
+    "title": "Projection",
+    "content": "Your last payment will be ?, ?. If you paid off your loan in full today, you would save ? in interest payments. If you have any debts at a higher rate or interest, pay those off first. If you have any investments at a higher rate of interests, or can make some, it’s not a good idea to pay your student loan of early. If your money stuck in a savings account earnings a lower rate of interest, it’s probably a good idea to put some of that towards paying off your loan early, as long as you keep enough savings for emergencies. ",
+    "url": "/blog/student-loan-calculator/#projection",
+    "relUrl": "/student-loan-calculator/#projection"
+  },"10": {
     "doc": "Exponential Linear Intersection",
     "title": "Exponential Linear Intersection",
     "content": "For a given exponential curve and a given line, can we know if and where they intersect? . That is, for two equations \\(y\\) and \\(z\\) \\[ y = mx + b \\] \\[ z = e^{nx} + c\\] can we solve \\(y = z\\), or even tell if there is a solution? \\[ mx + b = e^{nx} + c \\] . A better mathmatician than I might be able to solve that, but in the meantime let's graph an example. Below \\(y\\) intersects \\(z\\), but not \\(z'\\). Looking at this graph we can see that the exponential gradient starts shallow and ends up steep. And if the curves intersect, it must be at points where there gradients are unequal, else they'd be parralel. Assuming both curves have a positive gradient, at the first intersection the gradient of \\(z\\) must be less than that of \\(y\\), and vice versa at the second intersection. And as both curves are smooth, somewhere in between these intersections the gradients must be equal. Differentiating these functions we get \\[ {dy \\over dx} = m \\] \\[ {dz \\over dx} = ne^{nx}\\] and when equated we can easily solve for \\(x\\) \\[ ne^{nx} = m \\] \\[ e^{nx} = { m \\over n } \\] \\[ nx = \\ln { m \\over n } \\] \\[ nx = \\ln m - \\ln n \\] \\[ x = { \\ln m - \\ln n \\over n } \\] . So now we know that when \\( x = { \\ln m - \\ln n \\over n } \\) the lines are parallel, and if the lines intersect at all \\(z\\) must be less than \\(y\\) at this point. Once we know there the lines intersect, we can resort to numerical methods to find the intersection itself, such as a binary search or the Newton-Raphson method. ",
     "url": "/blog/exponential-linear-intersection/",
     "relUrl": "/exponential-linear-intersection/"
-  },"7": {
+  },"11": {
+    "doc": "UK House Prices",
+    "title": "UK House Prices",
+    "content": "If you’re looking to buy a house, you might be interested in what the housing market will look like in the future. By the time you’ve saved up your deposit, it may no longer be enough to afford the house you want! . Just by glancing at the graph above we can see that house prices go up over the long term, but predicting even a few years ahead is difficult. Trends plotted in 1990 or 2007 would not have been accurate a few years later. Many finance trends are exponential, so let’s look at the above data on a logarithmic scale. Now the same data paints a different picture, if fact in you squint hard enough you can almost see a linear trend. Smoother data is easier to predict, and the 2008 financial crash does look a lot less pronounced from this perspective, appearing to be merely a reversion to the “expected” price. However the 1990s slump is still there, and new irregularities have even appeared, such as the boom in the early 1970s. An easing of credit conditions by the Bank of England coupled with the go-for-growth strategy of the Conservative chancellor, Tony Barber, resulted in house-price inflation peaking at 36%. The average price of a home, which had risen from £2,000 to £5,000 between 1950 and 1970, doubled in the next three years. The boom ended when the Yom Kippur war and the Opec oil embargo ushered in the stagflation of the mid-1970s. L. Elliot, A brief history of British housing . In an effort to find more predictable data, let’s limit ourselves to the last 10 years. This is a somewhat abritrary time frame, but does exclude the 2008 crash and some of it’s aftershocks. Here we can see that between Oct 2011 and Sep 2021 house prices rose from 165kGBP to almost 260kGBP, that’s 57% over the decade or an APR of 4.65%. Data courtesy of HM Land Registry . ",
+    "url": "/blog/uk-house-prices/",
+    "relUrl": "/uk-house-prices/"
+  },"12": {
     "doc": "MathJax Demo",
     "title": "MathJax Demo",
     "content": "When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are \\[x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.\\] . ",
     "url": "/blog/mathjax-demo/",
     "relUrl": "/mathjax-demo/"
-  },"8": {
+  },"13": {
     "doc": "Outbound Link Warnings",
     "title": "Outbound Link Warnings",
     "content": "Often to meet certification requirements or comply with regulations such as SOX or PCI-DSS, we need to warn users before they follow any link that leads away from our domain. Implementing this quickly across multiple sites with limited resources can be seem daunting, but the script below can be used to meet baseline requirements quickly. It’s not pretty, but it does he job! . Simply include the script below somewhere on your site: . /** * This listener detects when a visitor is about to navigate to a * different domain and warns them, with an option to cancel * * This is required for regulatory compliance */ window.addEventListener('click', function (e) { function findAnchor(node) { if (!node) return node if (node.tagName === 'A') return node return findAnchor(node.parentNode) } const anchor = findAnchor(e.target) if (!anchor) return if (anchor.hostname === window.location.hostname) return const leave = window.confirm('You are now leaving ' + window.location.hostname) if (!leave) e.preventDefault() }) . ",
     "url": "/blog/outbound-link-warnings.html",
     "relUrl": "/outbound-link-warnings.html"
-  },"9": {
+  },"14": {
     "doc": "Red",
     "title": "Red",
     "content": "Red is the color at the long wavelength end of the visible spectrum of light, next to orange and opposite violet. It has a dominant wavelength of approximately 625–740 nanometres. It is a primary color in the RGB color model and a secondary color (made from magenta and yellow) in the CMYK color model, and is the complementary color of cyan. Reds range from the brilliant yellow-tinged scarlet and vermillion to bluish-red crimson, and vary in shade from the pale red pink to the dark red burgundy. Red pigment made from ochre was one of the first colors used in prehistoric art. The Ancient Egyptians and Mayans colored their faces red in ceremonies; Roman generals had their bodies colored red to celebrate victories. It was also an important color in China, where it was used to color early pottery and later the gates and walls of palaces. In the Renaissance, the brilliant red costumes for the nobility and wealthy were dyed with kermes and cochineal. The 19th century brought the introduction of the first synthetic red dyes, which replaced the traditional dyes. Red became a symbolic color of communism; Soviet Russia adopted a red flag following the Bolshevik Revolution in 1917, later followed by China, Vietnam, and other communist countries. Since red is the color of blood, it has historically been associated with sacrifice, danger, and courage. Modern surveys in Europe and the United States show red is also the color most commonly associated with heat, activity, passion, sexuality, anger, love, and joy. In China, India and many other Asian countries it is the color symbolizing happiness and good fortune. ",
