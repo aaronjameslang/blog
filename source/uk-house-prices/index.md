@@ -25,7 +25,7 @@ In an effort to find more predictable data, let's limit ourselves to the last 10
 
 <div id="chart-log-10y" style="width:100%; height:400px;"></div>
 
-Here we can see that between Oct 2011 and Sep 2021 house prices rose from 165kGBP to almost 260kGBP, that's 57% over the decade or an <abbr title="Annual percentage rate">APR</abbr> of 4.65%.<!-- TODO don't hard code this data -->
+Here we can see that between <span id="date-10y">?</span> and <span id="date-last">?</span> house prices rose from <span id="price-10y"></span> to around <span id="price-last"></span>, that's <span id="decade-pr">?</span>% over the decade or an <abbr title="Annual percentage rate">APR</abbr> of <span id="annual-pr">?</span>%.
 
 <script src="bundle.js"></script>
 ---

@@ -1,9 +1,4 @@
-import Highcharts, {
-  Options,
-  SeriesLineOptions,
-  SeriesScatterOptions,
-  SeriesSplineOptions
-} from 'highcharts'
+import Highcharts, { Options } from 'highcharts'
 import {
   linearRegression,
   linearRegressionLine
@@ -16,8 +11,6 @@ const ukData10y = (function () {
   const dawn = last[0] - (MS_PER_YEAR * 10)
   return ukData.filter(([x, y]) => x >= dawn)
 })()
-
-type Series = SeriesScatterOptions | SeriesSplineOptions | SeriesSplineOptions
 
 const baseOptions: Options = {
   chart: {
@@ -55,6 +48,19 @@ function calcExpTrend(data: number[][]) {
   const logTrend = data.map(([x, y]) => [x, x2y(x)])
   const trend = logTrend.map(([x, y]) => [x, Math.exp(y)])
   return trend
+}
+
+function formatCurrency3sf(value: number) {
+  value = Number.parseFloat(value.toPrecision(3))
+  return value.toLocaleString('en-GB', {
+    style: 'currency', currency: 'GBP'
+  })
+}
+
+function formatDate(ms: number) {
+  return new Date(ms).toLocaleDateString(undefined, {
+    year: 'numeric', month: 'short'
+  })
 }
 
 const options: Record<string, Options> = {
@@ -97,8 +103,24 @@ const options: Record<string, Options> = {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function render() {
+  const $ = ([id]: TemplateStringsArray) =>
+    document.getElementById(id) ?? document.createElement('p')
+
   for (const key in options) {
     Highcharts.chart(`chart-${key}`, options[key])
   }
-})
+
+  const last = ukData10y[ukData10y.length - 1]
+  const point10y = ukData10y[0]
+  const decadePcr = last[1] / point10y[1]
+  const annualPcr = Math.pow(decadePcr, 1 / 10)
+  $`date-last`.innerText = formatDate(last[0])
+  $`date-10y`.innerText = formatDate(point10y[0])
+  $`price-last`.innerHTML = formatCurrency3sf(last[1])
+  $`price-10y`.innerHTML = formatCurrency3sf(point10y[1])
+  $`decade-pr`.innerHTML = (decadePcr * 100 - 100).toPrecision(3)
+  $`annual-pr`.innerHTML = (annualPcr * 100 - 100).toPrecision(3)
+}
+
+document.addEventListener('DOMContentLoaded', render)
