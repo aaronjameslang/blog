@@ -54,6 +54,17 @@ function calcExpTrend(data) {
     const trend = logTrend.map(([x, y]) => [x, Math.exp(y)]);
     return trend;
 }
+function formatCurrency3sf(value) {
+    value = Number.parseFloat(value.toPrecision(3));
+    return value.toLocaleString('en-GB', {
+        style: 'currency', currency: 'GBP'
+    });
+}
+function formatDate(ms) {
+    return new Date(ms).toLocaleDateString(undefined, {
+        year: 'numeric', month: 'short'
+    });
+}
 const options = {
     simple: Object.assign({}, baseOptions),
     log: Object.assign(Object.assign({}, baseOptions), { series: [{
@@ -83,11 +94,23 @@ const options = {
             type: 'logarithmic'
         } })
 };
-document.addEventListener('DOMContentLoaded', function () {
+function render() {
+    const $ = ([id]) => { var _a; return (_a = document.getElementById(id)) !== null && _a !== void 0 ? _a : document.createElement('p'); };
     for (const key in options) {
         highcharts_1.default.chart(`chart-${key}`, options[key]);
     }
-});
+    const last = ukData10y[ukData10y.length - 1];
+    const point10y = ukData10y[0];
+    const decadePcr = last[1] / point10y[1];
+    const annualPcr = Math.pow(decadePcr, 1 / 10);
+    $ `date-last`.innerText = formatDate(last[0]);
+    $ `date-10y`.innerText = formatDate(point10y[0]);
+    $ `price-last`.innerHTML = formatCurrency3sf(last[1]);
+    $ `price-10y`.innerHTML = formatCurrency3sf(point10y[1]);
+    $ `decade-pr`.innerHTML = (decadePcr * 100 - 100).toPrecision(3);
+    $ `annual-pr`.innerHTML = (annualPcr * 100 - 100).toPrecision(3);
+}
+document.addEventListener('DOMContentLoaded', render);
 
 
 /***/ }),
