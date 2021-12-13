@@ -33,6 +33,11 @@ const baseOptions = {
     title: {
         text: undefined // 'UK House Prices'
     },
+    tooltip: {
+        shared: true,
+        valueDecimals: 2,
+        valuePrefix: "£"
+    },
     xAxis: {
         title: { text: 'Date' },
         type: 'datetime'
