@@ -1,10 +1,8 @@
 ---
 layout: page
-title: MathJax Demo
-permalink: /mathjax-demo/
 ---
 
-# {{ page.title }}
+# MathJax Demo
 
 <p>
   When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are

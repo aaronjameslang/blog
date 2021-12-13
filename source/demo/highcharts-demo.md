@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Highcharts Demo
-permalink: /highcharts-demo/
 ---
 
-# {{ page.title }}
+# Highcharts Demo
 
 <script src="https://code.highcharts.com/9.3/highcharts.src.js"></script>
 

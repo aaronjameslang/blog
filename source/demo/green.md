@@ -1,7 +1,5 @@
 ---
 layout: page
-title: Green
-permalink: /green/
 ---
 
 # Green

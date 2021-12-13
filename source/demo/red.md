@@ -1,7 +1,5 @@
 ---
 layout: page
-title: Red
-permalink: /red/
 ---
 
 # Red
