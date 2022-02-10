@@ -75,7 +75,7 @@ when=$(date +%Y-%m-%dT%H:%M:%S%z)
 
 #   The name of the current user account. It can be useful to know if
 # the build was created manually/locally or by an automated system.
-who=${USER}
+who=${USER-}
 
 # You should add build-info.json to your .gitignore
 
