@@ -20,21 +20,21 @@ I recommend installing it and using on all your applications new and old.
 Contributors should be responsible for installing nvm on their systems,
 similar to git or their preferred IDE.
 
-Once present we can take a snapshot of our current node version like
+Once set up we can take a snapshot of our current node version with
 `node --version > .nvmrc`. This will create a `.nvmrc` file which records
 the node version the application is known to work with, similar to how
-`package-lock.json` records the exact version of each node dependancy.
+`package-lock.json` records the exact version of each node module dependency.
 
-Then when working with the application, before running `npm install`, we
+Then when working with your application, before running `npm install`, we
 can run `nvm install` which will install the correct version of node if
-we don't have it already, and ensure that our local environemnt is set
+we don't have it already, and ensure that our local environment is set
 up to use that version.
 
 Unfortunately there's no way to do anything similar with your `npm` version,
 so the best approach I've found is to use `nvm install --lastest-npm` which will
 ensure you always have the latest version.
 
-## `npm` Clean Install
+## Clean `npm` Installs
 
 The standard install command `npm install` will try to be smart by only installing
 the node modules that are missing, and updating your `package-lock.json` file
@@ -49,7 +49,7 @@ necessary testing.
 
 ## Documentation
 
-Once you've gone to the trouble to set this up, ensure you add installtion
+Once you've gone to the trouble to set this up, ensure you add installation
 instructions to your read-me and/or other documents.
 
 ```sh
