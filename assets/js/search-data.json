@@ -47,65 +47,65 @@
     "url": "/blog/headless-raspberry-pi.html",
     "relUrl": "/headless-raspberry-pi.html"
   },"8": {
-    "doc": "Exponential Linear Intersection",
-    "title": "Exponential Linear Intersection",
-    "content": "For a given exponential curve and a given line, can we know if and where they intersect? . That is, for two equations \\(y\\) and \\(z\\) \\[ y = mx + b \\] \\[ z = e^{nx} + c\\] can we solve \\(y = z\\), or even tell if there is a solution? \\[ mx + b = e^{nx} + c \\] . A better mathmatician than I might be able to solve that, but in the meantime let's graph an example. Below \\(y\\) intersects \\(z\\), but not \\(z'\\). Looking at this graph we can see that the exponential gradient starts shallow and ends up steep. And if the curves intersect, it must be at points where there gradients are unequal, else they'd be parralel. Assuming both curves have a positive gradient, at the first intersection the gradient of \\(z\\) must be less than that of \\(y\\), and vice versa at the second intersection. And as both curves are smooth, somewhere in between these intersections the gradients must be equal. Differentiating these functions we get \\[ {dy \\over dx} = m \\] \\[ {dz \\over dx} = ne^{nx}\\] and when equated we can easily solve for \\(x\\) \\[ ne^{nx} = m \\] \\[ e^{nx} = { m \\over n } \\] \\[ nx = \\ln { m \\over n } \\] \\[ nx = \\ln m - \\ln n \\] \\[ x = { \\ln m - \\ln n \\over n } \\] . So now we know that when \\( x = { \\ln m - \\ln n \\over n } \\) the lines are parallel, and if the lines intersect at all \\(z\\) must be less than \\(y\\) at this point. Once we know there the lines intersect, we can resort to numerical methods to find the intersection itself, such as a binary search or the Newton-Raphson method. ",
-    "url": "/blog/exponential-linear-intersection/",
-    "relUrl": "/exponential-linear-intersection/"
-  },"9": {
-    "doc": "Student Loan Calculator",
-    "title": "Student Loan Calculator",
-    "content": "Most graduates in the UK have a significant amount of student debt, but with low interest and means-based repayments taken directly from their pay cheques, few ever think about it. How soon will your loan be re-payed? Should you consider repaying your student loan early? Here we can answer those questions and more. This calculator assumes you’re on repayment plan 1. Figures are correct at time of writing. ",
-    "url": "/blog/student-loan-calculator/",
-    "relUrl": "/student-loan-calculator/"
-  },"10": {
-    "doc": "Student Loan Calculator",
-    "title": "Repayments",
-    "content": "For plan 1 the threshold is £1,657 a month, above which you’ll pay 9% of your salary. What’s your current yearly income pre-tax? . Each month you currently repay ?. Your repayment will go up if your income increases. We’ll assume a 10% annual raise every year. ",
-    "url": "/blog/student-loan-calculator/#repayments",
-    "relUrl": "/student-loan-calculator/#repayments"
-  },"11": {
-    "doc": "Student Loan Calculator",
-    "title": "Interest Charges",
-    "content": "Your debt will accrue interest at 1.1% APR. What’s the value of your student loan today? . Each month your debt accrues interest of ?. ",
-    "url": "/blog/student-loan-calculator/#interest-charges",
-    "relUrl": "/student-loan-calculator/#interest-charges"
-  },"12": {
-    "doc": "Student Loan Calculator",
-    "title": "Write Off",
-    "content": "Your loan will be written of 25 years after you graduate. When did you graduate? . Based on your graduation date, your loan will be written off ?, ? . ",
-    "url": "/blog/student-loan-calculator/#write-off",
-    "relUrl": "/student-loan-calculator/#write-off"
-  },"13": {
-    "doc": "Student Loan Calculator",
-    "title": "Projection",
-    "content": "Your last payment will be ?, ?. If you paid off your loan in full today, you would save ? in interest payments. If you have any debts at a higher rate or interest, pay those off first. If you have any investments at a higher rate of interests, or can make some, it’s not a good idea to pay your student loan of early. If your money stuck in a savings account earnings a lower rate of interest, it’s probably a good idea to put some of that towards paying off your loan early, as long as you keep enough savings for emergencies. ",
-    "url": "/blog/student-loan-calculator/#projection",
-    "relUrl": "/student-loan-calculator/#projection"
-  },"14": {
-    "doc": "Self-Documenting Micro-Servers",
-    "title": "Self-Documenting Micro-Servers",
-    "content": "If you’re anything like me, you have a number of small computers in your home (e.g. raspberry pi’s) providing various services. After some time it’s easy to forget which services are available on which servers, or even how to connect and make use of those services. Or perhaps you want to provide guides for your family or guests to be able to use these services. The best solution I’ve found is to serve these documents from the servers themselves over HTTP. This has the benefits of making the documents easy to access for non-technical folk, and a making it easy to update the docs whenever you update the server. To start let’s install a web server on our micro-server. &gt; sudo apt install apache2 . You should now be able to visit the IP address of your server to see the default Apache homepage. If you’ve set the host name and your client supports mDNS (Android does not) you can browse by host name, such as my-raspberry-pi.local. We’re going to publish some docs about this server via the web server. If you’re planning to run a web server for some other purpose, you can use virtual hosts to publish the docs at another port, like 8008 or 8080. The default homepage is /var/www/html/index.html, you can edit this and replace it with your own content like . &lt;h1&gt;my-raspberry-pi&lt;/h1&gt; &lt;p&gt; This is a Model 4B Raspberry Pi with a red and white case. &lt;/p&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Minecraft&lt;/h2&gt; &lt;p&gt; This server hosts a minecraft server. To join follow these steps: &lt;ol&gt; &lt;li&gt;In Minecraft, click Multiplayer&lt;/li&gt; &lt;li&gt;Click Add Server&lt;/li&gt; &lt;li&gt;Enter the server name \"Alice's Awesome Minecraft Server\"&lt;/li&gt; &lt;li&gt;Enter the address 192.168.1.11:25565&lt;/li&gt; &lt;/ol&gt; &lt;/p&gt; . Refreshing the web page should show you something like this. Basic, but functional and easy to set up. As you add or remove services on the server, you can update the docs. ",
-    "url": "/blog/self-documenting-micro-servers/",
-    "relUrl": "/self-documenting-micro-servers/"
-  },"15": {
-    "doc": "Self-Documenting Micro-Servers",
-    "title": "Making it Smart",
-    "content": "With a few changes we can have the page dynamically generated each time, and include real-time information. Replace /var/www/hmtl/index.html with index.cgi and the following contents: . #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; EOF . Here we’re using CGI to automatically fill in the host name. But if you refreshing the web page you’ll just see the contents of the script, it hasn’t run. We need to make a few more changes. Add this block to the vhost in /etc/apache2/sites-enabled/000-default.conf or a different vhost on a different port if you’re planning to use that one for something else. &lt;Directory \"/var/www/html\"&gt; AddHandler cgi-script .cgi Options +ExecCGI &lt;/Directory&gt; . Then make you script executable and enable the CGI module in Apache. &gt; sudo chmod +x /var/www/html/index.cgi &gt; sudo a2enmod cgi &gt; sudo service apache2 restart . Refreshing now should show you the rendered output of the script. We can add more details to help us easily monitor the server’s condition. #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Monitoring&lt;/h2&gt; &lt;pre&gt;$(uptime)&lt;/pre&gt; &lt;pre&gt;$(free -h)&lt;/pre&gt; &lt;pre&gt;$(df)&lt;/pre&gt; &lt;pre&gt;$(netstat -tulp)&lt;/pre&gt; &lt;pre&gt;$(ip address)&lt;/pre&gt; &lt;pre&gt;$(apt list --upgradeable)&lt;/pre&gt; &lt;/body&gt; &lt;/html&gt; EOF . ",
-    "url": "/blog/self-documenting-micro-servers/#making-it-smart",
-    "relUrl": "/self-documenting-micro-servers/#making-it-smart"
-  },"16": {
-    "doc": "Self-Documenting Micro-Servers",
-    "title": "Advanced Monitoring",
-    "content": "For a more complete monitoring solution you might want to look at Monit, Monitorix or even Prometheus. These won’t replace your documentation, but you can link to them instead of rolling your own. #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Monitoring&lt;/h2&gt; &lt;p&gt; This server uses [Monit](https://mmonit.com/monit). View the dashboard [here](192.168.1.11:2812). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; EOF . ",
-    "url": "/blog/self-documenting-micro-servers/#advanced-monitoring",
-    "relUrl": "/self-documenting-micro-servers/#advanced-monitoring"
-  },"17": {
     "doc": "UK House Prices",
     "title": "UK House Prices",
     "content": "If you’re looking to buy a house, you might be interested in what the housing market will look like in the future. By the time you’ve saved up your deposit, it may no longer be enough to afford the house you want! . Just by glancing at the graph above we can see that house prices go up over the long term, but predicting even a few years ahead is difficult. Trends plotted in 1990 or 2007 would not have been accurate a few years later. Many finance trends are exponential, so let’s look at the above data on a logarithmic scale. Now the same data paints a different picture, if fact in you squint hard enough you can almost see a linear trend. Smoother data is easier to predict, and the 2008 financial crash does look a lot less pronounced from this perspective, appearing to be merely a reversion to the “expected” price. However the 1990s slump is still there, and new irregularities have even appeared, such as the boom in the early 1970s. An easing of credit conditions by the Bank of England coupled with the go-for-growth strategy of the Conservative chancellor, Tony Barber, resulted in house-price inflation peaking at 36%. The average price of a home, which had risen from £2,000 to £5,000 between 1950 and 1970, doubled in the next three years. The boom ended when the Yom Kippur war and the Opec oil embargo ushered in the stagflation of the mid-1970s. L. Elliot, A brief history of British housing . In an effort to find more predictable data, let’s limit ourselves to the last 10 years. This is a somewhat abritrary time frame, but does exclude the 2008 crash and some of it’s aftershocks. Here we can see that between ? and ? house prices rose from to around , that’s ?% over the decade or an APR of ?%. Data courtesy of HM Land Registry . ",
     "url": "/blog/uk-house-prices/",
     "relUrl": "/uk-house-prices/"
+  },"9": {
+    "doc": "Self-Documenting Micro-Servers",
+    "title": "Self-Documenting Micro-Servers",
+    "content": "If you’re anything like me, you have a number of small computers in your home (e.g. raspberry pi’s) providing various services. After some time it’s easy to forget which services are available on which servers, or even how to connect and make use of those services. Or perhaps you want to provide guides for your family or guests to be able to use these services. The best solution I’ve found is to serve these documents from the servers themselves over HTTP. This has the benefits of making the documents easy to access for non-technical folk, and a making it easy to update the docs whenever you update the server. To start let’s install a web server on our micro-server. &gt; sudo apt install apache2 . You should now be able to visit the IP address of your server to see the default Apache homepage. If you’ve set the host name and your client supports mDNS (Android does not) you can browse by host name, such as my-raspberry-pi.local. We’re going to publish some docs about this server via the web server. If you’re planning to run a web server for some other purpose, you can use virtual hosts to publish the docs at another port, like 8008 or 8080. The default homepage is /var/www/html/index.html, you can edit this and replace it with your own content like . &lt;h1&gt;my-raspberry-pi&lt;/h1&gt; &lt;p&gt; This is a Model 4B Raspberry Pi with a red and white case. &lt;/p&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Minecraft&lt;/h2&gt; &lt;p&gt; This server hosts a minecraft server. To join follow these steps: &lt;ol&gt; &lt;li&gt;In Minecraft, click Multiplayer&lt;/li&gt; &lt;li&gt;Click Add Server&lt;/li&gt; &lt;li&gt;Enter the server name \"Alice's Awesome Minecraft Server\"&lt;/li&gt; &lt;li&gt;Enter the address 192.168.1.11:25565&lt;/li&gt; &lt;/ol&gt; &lt;/p&gt; . Refreshing the web page should show you something like this. Basic, but functional and easy to set up. As you add or remove services on the server, you can update the docs. ",
+    "url": "/blog/self-documenting-micro-servers/",
+    "relUrl": "/self-documenting-micro-servers/"
+  },"10": {
+    "doc": "Self-Documenting Micro-Servers",
+    "title": "Making it Smart",
+    "content": "With a few changes we can have the page dynamically generated each time, and include real-time information. Replace /var/www/hmtl/index.html with index.cgi and the following contents: . #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; EOF . Here we’re using CGI to automatically fill in the host name. But if you refreshing the web page you’ll just see the contents of the script, it hasn’t run. We need to make a few more changes. Add this block to the vhost in /etc/apache2/sites-enabled/000-default.conf or a different vhost on a different port if you’re planning to use that one for something else. &lt;Directory \"/var/www/html\"&gt; AddHandler cgi-script .cgi Options +ExecCGI &lt;/Directory&gt; . Then make you script executable and enable the CGI module in Apache. &gt; sudo chmod +x /var/www/html/index.cgi &gt; sudo a2enmod cgi &gt; sudo service apache2 restart . Refreshing now should show you the rendered output of the script. We can add more details to help us easily monitor the server’s condition. #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Monitoring&lt;/h2&gt; &lt;pre&gt;$(uptime)&lt;/pre&gt; &lt;pre&gt;$(free -h)&lt;/pre&gt; &lt;pre&gt;$(df)&lt;/pre&gt; &lt;pre&gt;$(netstat -tulp)&lt;/pre&gt; &lt;pre&gt;$(ip address)&lt;/pre&gt; &lt;pre&gt;$(apt list --upgradeable)&lt;/pre&gt; &lt;/body&gt; &lt;/html&gt; EOF . ",
+    "url": "/blog/self-documenting-micro-servers/#making-it-smart",
+    "relUrl": "/self-documenting-micro-servers/#making-it-smart"
+  },"11": {
+    "doc": "Self-Documenting Micro-Servers",
+    "title": "Advanced Monitoring",
+    "content": "For a more complete monitoring solution you might want to look at Monit, Monitorix or even Prometheus. These won’t replace your documentation, but you can link to them instead of rolling your own. #! /bin/sh cat &lt;&lt; EOF Content-type: text/html &lt;html&gt; &lt;head&gt; &lt;title&gt;$(hostname)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;$(hostname)&lt;/h1&gt; &lt;h2&gt;File Sharing&lt;/h2&gt; &lt;p&gt; This server hosts a smb file share. To join from your Mac open up the Finder and click Go, Connect to Server. Then type smb://192.168.1.11. Click Connect, you won't need a password. &lt;/p&gt; &lt;h2&gt;Monitoring&lt;/h2&gt; &lt;p&gt; This server uses [Monit](https://mmonit.com/monit). View the dashboard [here](192.168.1.11:2812). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; EOF . ",
+    "url": "/blog/self-documenting-micro-servers/#advanced-monitoring",
+    "relUrl": "/self-documenting-micro-servers/#advanced-monitoring"
+  },"12": {
+    "doc": "Student Loan Calculator",
+    "title": "Student Loan Calculator",
+    "content": "Most graduates in the UK have a significant amount of student debt, but with low interest and means-based repayments taken directly from their pay cheques, few ever think about it. How soon will your loan be re-payed? Should you consider repaying your student loan early? Here we can answer those questions and more. This calculator assumes you’re on repayment plan 1. Figures are correct at time of writing. ",
+    "url": "/blog/student-loan-calculator/",
+    "relUrl": "/student-loan-calculator/"
+  },"13": {
+    "doc": "Student Loan Calculator",
+    "title": "Repayments",
+    "content": "For plan 1 the threshold is £1,657 a month, above which you’ll pay 9% of your salary. What’s your current yearly income pre-tax? . Each month you currently repay ?. Your repayment will go up if your income increases. We’ll assume a 10% annual raise every year. ",
+    "url": "/blog/student-loan-calculator/#repayments",
+    "relUrl": "/student-loan-calculator/#repayments"
+  },"14": {
+    "doc": "Student Loan Calculator",
+    "title": "Interest Charges",
+    "content": "Your debt will accrue interest at 1.1% APR. What’s the value of your student loan today? . Each month your debt accrues interest of ?. ",
+    "url": "/blog/student-loan-calculator/#interest-charges",
+    "relUrl": "/student-loan-calculator/#interest-charges"
+  },"15": {
+    "doc": "Student Loan Calculator",
+    "title": "Write Off",
+    "content": "Your loan will be written of 25 years after you graduate. When did you graduate? . Based on your graduation date, your loan will be written off ?, ? . ",
+    "url": "/blog/student-loan-calculator/#write-off",
+    "relUrl": "/student-loan-calculator/#write-off"
+  },"16": {
+    "doc": "Student Loan Calculator",
+    "title": "Projection",
+    "content": "Your last payment will be ?, ?. If you paid off your loan in full today, you would save ? in interest payments. If you have any debts at a higher rate or interest, pay those off first. If you have any investments at a higher rate of interests, or can make some, it’s not a good idea to pay your student loan of early. If your money stuck in a savings account earnings a lower rate of interest, it’s probably a good idea to put some of that towards paying off your loan early, as long as you keep enough savings for emergencies. ",
+    "url": "/blog/student-loan-calculator/#projection",
+    "relUrl": "/student-loan-calculator/#projection"
+  },"17": {
+    "doc": "Exponential Linear Intersection",
+    "title": "Exponential Linear Intersection",
+    "content": "For a given exponential curve and a given line, can we know if and where they intersect? . That is, for two equations \\(y\\) and \\(z\\) \\[ y = mx + b \\] \\[ z = e^{nx} + c\\] can we solve \\(y = z\\), or even tell if there is a solution? \\[ mx + b = e^{nx} + c \\] . A better mathmatician than I might be able to solve that, but in the meantime let's graph an example. Below \\(y\\) intersects \\(z\\), but not \\(z'\\). Looking at this graph we can see that the exponential gradient starts shallow and ends up steep. And if the curves intersect, it must be at points where there gradients are unequal, else they'd be parralel. Assuming both curves have a positive gradient, at the first intersection the gradient of \\(z\\) must be less than that of \\(y\\), and vice versa at the second intersection. And as both curves are smooth, somewhere in between these intersections the gradients must be equal. Differentiating these functions we get \\[ {dy \\over dx} = m \\] \\[ {dz \\over dx} = ne^{nx}\\] and when equated we can easily solve for \\(x\\) \\[ ne^{nx} = m \\] \\[ e^{nx} = { m \\over n } \\] \\[ nx = \\ln { m \\over n } \\] \\[ nx = \\ln m - \\ln n \\] \\[ x = { \\ln m - \\ln n \\over n } \\] . So now we know that when \\( x = { \\ln m - \\ln n \\over n } \\) the lines are parallel, and if the lines intersect at all \\(z\\) must be less than \\(y\\) at this point. Once we know there the lines intersect, we can resort to numerical methods to find the intersection itself, such as a binary search or the Newton-Raphson method. ",
+    "url": "/blog/exponential-linear-intersection/",
+    "relUrl": "/exponential-linear-intersection/"
   },"18": {
     "doc": "Outbound Link Warnings",
     "title": "Outbound Link Warnings",
