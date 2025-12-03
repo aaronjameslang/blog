@@ -1,15 +1,11 @@
-name: publish
+name: build
 on:
-  push:
+  pull_request:
     branches:
       - main
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/jekyll-build
-      - uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: _site
