@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+if ! command -v ruby >/dev/null 2>&1; then
+	echo "Error: Ruby not installed. See https://jekyllrb.com/docs/installation"
+	exit 1
+fi
+
+if ! command -v gem >/dev/null 2>&1; then
+	echo "Error: gem not installed. See https://jekyllrb.com/docs/installation"
+	exit 1
+fi
+
+if ! command -v bundle >/dev/null 2>&1; then
+	echo "Error: Bundler not installed."
+	echo "Run: gem install bundler"
+	exit 1
+fi

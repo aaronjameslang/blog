@@ -4,40 +4,30 @@ A personal blog built with Jekyll and the just-the-docs theme, hosted on GitHub 
 
 See it here: https://aaronjameslang.github.io/blog/
 
-## Prerequisites
-
-Install Ruby and the required dependencies. See the [Jekyll installation guide](https://jekyllrb.com/docs/installation/) for your operating system.
-
-### macOS
-
-```sh
-brew install ruby
-```
-
-### Ubuntu/Debian
-
-```sh
-sudo apt install ruby-full build-essential
-```
-
 ## Running Locally
 
-Use the `j` wrapper script to run Jekyll commands:
+First, install dependencies:
 
 ```sh
-./j serve
+make install
 ```
 
-This will:
+You may receive errors if you do not have ruby or other pre-requisites. See the
+[Jekyll installation guide](https://jekyllrb.com/docs/installation/) for your
+operating system.
 
-- Install bundler if needed
-- Install gem dependencies
-- Start the development server with live reload at http://localhost:4000/blog/
+Start the development server with live reload:
+
+```sh
+make serve
+```
+
+The site will be available at http://localhost:4000/blog/
 
 To build the site without serving:
 
 ```sh
-./j build
+make build
 ```
 
 The built site will be in the `_site/` directory.
