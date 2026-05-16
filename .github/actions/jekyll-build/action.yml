@@ -7,5 +7,5 @@ runs:
       with:
         ruby-version: "3.4"
         bundler-cache: true
-    - run: ./j build
+    - run: make build
       shell: bash
