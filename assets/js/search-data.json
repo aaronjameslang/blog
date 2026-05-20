@@ -211,9 +211,51 @@
   },"30": {
     "doc": "Posts",
     "title": "Posts",
-    "content": ". | AWS MFA CLI — If you’ve ever had to use the AWS CLI with MFA enabled on your account, you’ll know it’s a PITA. | CloudFront Invalidation — Hosting sites serverlessly using AWS S3 and CloudFront is a simple and affordable solution. | Explicit Versioning — Versioning is an important part of software development, but simply having a version number isn’t much use if your users can’t access it. | GitHub Actions OIDC with AWS — Many of us start out pasting secret keys in to GitHub secrets in order to automate deploys, but there’s a better way. | Headless Raspberry Pi — First we need grab ourselves an OS image. | UK House Prices — If you’re looking to buy a house, you might be interested in what the housing market will look like in the future. | Exponential Linear Intersection — For a given exponential curve and a given line, can we know if and where they intersect? | Self-Documenting Micro-Servers — If you’re anything like me, you have a number of small computers in your home (e. | Student Loan Calculator — Most graduates in the UK have a significant amount of student debt, but with low interest and means-based repayments taken directly from their pay cheques, few ever think about it. | Outbound Link Warnings — Often to meet certification requirements or comply with regulations such as SOX or PCI-DSS, we need to warn users before they follow any link that leads away from our domain. | Reproducible Node Installations — As anyone who’s had to operate a legacy node application will tell you, step one is being able to install the damn thing. | . ",
+    "content": ". | AWS MFA CLI — If you’ve ever had to use the AWS CLI with MFA enabled on your account, you’ll know it’s a PITA. | CloudFront Invalidation — Hosting sites serverlessly using AWS S3 and CloudFront is a simple and affordable solution. | Explicit Versioning — Versioning is an important part of software development, but simply having a version number isn’t much use if your users can’t access it. software ux | GitHub Actions OIDC with AWS — Many of us start out pasting secret keys in to GitHub secrets in order to automate deploys, but there’s a better way. software aws devops security | Headless Raspberry Pi — First we need grab ourselves an OS image. software ux | UK House Prices — If you’re looking to buy a house, you might be interested in what the housing market will look like in the future. | Exponential Linear Intersection — For a given exponential curve and a given line, can we know if and where they intersect? | Self-Documenting Micro-Servers — If you’re anything like me, you have a number of small computers in your home (e. software ux | Student Loan Calculator — Most graduates in the UK have a significant amount of student debt, but with low interest and means-based repayments taken directly from their pay cheques, few ever think about it. | Outbound Link Warnings — Often to meet certification requirements or comply with regulations such as SOX or PCI-DSS, we need to warn users before they follow any link that leads away from our domain. | Reproducible Node Installations — As anyone who’s had to operate a legacy node application will tell you, step one is being able to install the damn thing. software node | . ",
     "url": "/blog/",
     
     "relUrl": "/"
+  },"31": {
+    "doc": "Posts tagged \"software\"",
+    "title": "Posts tagged \"software\"",
+    "content": ". | Explicit Versioning software ux | GitHub Actions OIDC with AWS software aws devops security | Headless Raspberry Pi software ux | Reproducible Node Installations software node | Self-Documenting Micro-Servers software ux | . ",
+    "url": "/blog/tags/software/",
+    
+    "relUrl": "/tags/software/"
+  },"32": {
+    "doc": "Posts tagged \"ux\"",
+    "title": "Posts tagged \"ux\"",
+    "content": ". | Explicit Versioning software ux | Headless Raspberry Pi software ux | Self-Documenting Micro-Servers software ux | . ",
+    "url": "/blog/tags/ux/",
+    
+    "relUrl": "/tags/ux/"
+  },"33": {
+    "doc": "Posts tagged \"aws\"",
+    "title": "Posts tagged \"aws\"",
+    "content": ". | GitHub Actions OIDC with AWS software aws devops security | . ",
+    "url": "/blog/tags/aws/",
+    
+    "relUrl": "/tags/aws/"
+  },"34": {
+    "doc": "Posts tagged \"devops\"",
+    "title": "Posts tagged \"devops\"",
+    "content": ". | GitHub Actions OIDC with AWS software aws devops security | . ",
+    "url": "/blog/tags/devops/",
+    
+    "relUrl": "/tags/devops/"
+  },"35": {
+    "doc": "Posts tagged \"security\"",
+    "title": "Posts tagged \"security\"",
+    "content": ". | GitHub Actions OIDC with AWS software aws devops security | . ",
+    "url": "/blog/tags/security/",
+    
+    "relUrl": "/tags/security/"
+  },"36": {
+    "doc": "Posts tagged \"node\"",
+    "title": "Posts tagged \"node\"",
+    "content": ". | Reproducible Node Installations software node | . ",
+    "url": "/blog/tags/node/",
+    
+    "relUrl": "/tags/node/"
   }
 }
