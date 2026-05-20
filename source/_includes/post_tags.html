@@ -1,0 +1,6 @@
+{% if include.page.tags %}
+  {% assign tag_list = include.page.tags | normalize_tags %}
+  {% for tag in tag_list %}
+    <a href="{{ site.baseurl }}/tags/{{ tag }}/" class="post-tag">{{ tag }}</a>
+  {% endfor %}
+{% endif %}

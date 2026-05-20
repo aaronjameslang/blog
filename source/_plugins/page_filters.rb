@@ -27,6 +27,14 @@ module Jekyll
 
       sentence
     end
+
+    def normalize_tags(raw)
+      case raw
+      when Array  then raw.map { |t| t.to_s.strip.downcase }.reject(&:empty?)
+      when String then raw.strip.split.map(&:downcase).reject(&:empty?)
+      else []
+      end
+    end
   end
 end
 

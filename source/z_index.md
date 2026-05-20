@@ -11,9 +11,10 @@ permalink: /
   {% if p.url == "/" %}{% continue %}{% endif %}
   {% if p.url contains "/404" %}{% continue %}{% endif %}
   {% if p.url contains "/demo/" %}{% continue %}{% endif %}
+  {% if p.url contains "/tags/" %}{% continue %}{% endif %}
   {% if p.published == false %}{% continue %}{% endif %}
   {% if p.title == nil or p.title == "" %}{% continue %}{% endif %}
-  <li><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a> — {{ p.content | first_sentence }}</li>
+  <li><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a> — {{ p.content | first_sentence }} {% include post_tags.html page=p %}</li>
 {% endfor %}
 </ul>
 
